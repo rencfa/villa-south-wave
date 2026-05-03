@@ -11,6 +11,7 @@
             --bg: #fdfcf9;
             --text: #2c2c2c;
             --white: #ffffff;
+            --insta: #E1306C;
         }
 
         * { box-sizing: border-box; }
@@ -29,7 +30,7 @@
             display: flex; justify-content: space-between; align-items: center;
             padding: 15px 5%; z-index: 1000; border-bottom: 1px solid #eee;
         }
-        .nav-links { display: flex; gap: 15px; }
+        .nav-links { display: flex; gap: 15px; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--primary); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
         
         .lang-btn { background: var(--primary); color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 3px; font-size: 0.7rem; }
@@ -64,6 +65,9 @@
         
         .submit-btn { width: 100%; background: var(--primary); color: white; border: none; padding: 20px; font-size: 1.2rem; cursor: pointer; margin-top: 20px; font-family: 'Playfair Display'; }
 
+        .instagram-footer { text-align: center; margin-top: 40px; }
+        .instagram-footer a { color: var(--insta); text-decoration: none; font-weight: 600; font-size: 1.1rem; letter-spacing: 1px; }
+
         @media (max-width: 768px) {
             .form-grid { grid-template-columns: 1fr; }
             .full-width { grid-column: span 1; }
@@ -80,6 +84,7 @@
             <a href="#galerie" class="ln" data-en="Gallery" data-fr="Galerie">Gallery</a>
             <a href="#availability" class="ln" data-en="Availability" data-fr="Disponibilités">Availability</a>
             <a href="#contact" class="ln" data-en="Contact" data-fr="Contact">Contact</a>
+            <a href="https://www.instagram.com/villasouthwave" target="_blank">Instagram</a>
         </div>
         <button class="lang-btn" onclick="switchLang()">FR / EN</button>
     </nav>
@@ -172,6 +177,10 @@
                 </div>
                 <button type="submit" class="submit-btn ln" data-en="Send Request" data-fr="Envoyer la demande">Send Request</button>
             </form>
+
+            <div class="instagram-footer">
+                <a href="https://www.instagram.com/villasouthwave" target="_blank">📸 Follow us @villasouthwave</a>
+            </div>
         </div>
     </section>
 
