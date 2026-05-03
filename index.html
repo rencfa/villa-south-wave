@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Villa South Wave | Saint-Barthélemy</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* CONFIGURATION GLOBALE */
         :root {
-            --primary: #7d5a44; /* Le brun de votre image */
+            --primary: #7d5a44; 
             --bg: #fdfcf9;
             --text: #2c2c2c;
             --white: #ffffff;
@@ -25,7 +24,6 @@
 
         h1, h2 { font-family: 'Playfair Display', serif; color: var(--primary); text-transform: uppercase; }
 
-        /* NAVIGATION RESPONSIVE */
         nav {
             position: sticky; top: 0; width: 100%; background: var(--white);
             display: flex; justify-content: space-between; align-items: center;
@@ -36,7 +34,6 @@
         
         .lang-btn { background: var(--primary); color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 3px; font-size: 0.7rem; }
 
-        /* HERO SECTION */
         .hero { 
             height: 80vh; 
             background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('Villa_South_Wave_1.jpeg') center/cover no-repeat; 
@@ -44,55 +41,47 @@
         }
         .hero h1 { color: white; font-size: clamp(2.5rem, 8vw, 5rem); margin: 0; letter-spacing: 5px; }
 
-        /* SECTION DESCRIPTION (TEXTE LONG) */
         .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
         .description-box { background: white; padding: 40px; border-left: 5px solid var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         .description-box p { margin-bottom: 20px; font-size: 1.05rem; color: #444; }
 
-        /* GRILLE DE CARACTÉRISTIQUES */
         .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
         .feat-card { background: #f9f6f2; padding: 20px; border: 1px solid #eee; text-align: center; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
 
-        /* GALERIE PHOTO */
         .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; padding: 20px; }
         .gallery img { width: 100%; height: 300px; object-fit: cover; cursor: pointer; transition: 0.3s; }
-        .gallery img:hover { opacity: 0.8; }
 
-        /* MODAL (OUVERTURE PHOTO) */
-        #lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; justify-content: center; align-items: center; cursor: pointer; }
-        #lightbox img { max-width: 90%; max-height: 90%; box-shadow: 0 0 20px rgba(255,255,255,0.2); }
+        #lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; justify-content: center; align-items: center; }
+        #lightbox img { max-width: 90%; max-height: 90%; }
 
-        /* FORMULAIRE DE CONTACT */
         .contact-section { background: #f4f1ed; padding: 80px 20px; }
         .form-container { max-width: 800px; margin: auto; background: white; padding: 40px; border-radius: 8px; }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .full-width { grid-column: span 2; }
         
         label { display: block; font-weight: 600; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; color: var(--primary); }
-        input, textarea, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Montserrat', sans-serif; font-size: 1rem; }
+        input, textarea, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Montserrat', sans-serif; }
         
-        .submit-btn { width: 100%; background: var(--primary); color: white; border: none; padding: 20px; font-size: 1.2rem; cursor: pointer; margin-top: 20px; font-family: 'Playfair Display'; transition: 0.3s; }
-        .submit-btn:hover { background: #5a4132; }
+        .submit-btn { width: 100%; background: var(--primary); color: white; border: none; padding: 20px; font-size: 1.2rem; cursor: pointer; margin-top: 20px; font-family: 'Playfair Display'; }
 
-        /* RESPONSIVE MOBILE */
         @media (max-width: 768px) {
             .form-grid { grid-template-columns: 1fr; }
             .full-width { grid-column: span 1; }
-            .nav-links { display: none; } /* On cache les liens pour simplifier sur mobile */
-            .description-box { padding: 20px; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div style="font-family: 'Playfair Display'; font-weight: bold; font-size: 1.2rem;">SOUTH WAVE</div>
+        <div style="font-family: 'Playfair Display'; font-weight: bold; font-size: 1.2rem;">VILLA SOUTH WAVE</div>
         <div class="nav-links">
-            <a href="#description" class="ln" data-fr="La Villa" data-en="The Villa">La Villa</a>
-            <a href="#galerie" class="ln" data-fr="Galerie" data-en="Gallery">Galerie</a>
-            <a href="#contact" class="ln" data-fr="Contact" data-en="Contact">Contact</a>
+            <a href="#description" class="ln" data-en="The Villa" data-fr="La Villa">The Villa</a>
+            <a href="#galerie" class="ln" data-en="Gallery" data-fr="Galerie">Gallery</a>
+            <a href="#availability" class="ln" data-en="Availability" data-fr="Disponibilités">Availability</a>
+            <a href="#contact" class="ln" data-en="Contact" data-fr="Contact">Contact</a>
         </div>
-        <button class="lang-btn" onclick="switchLang()">EN / FR</button>
+        <button class="lang-btn" onclick="switchLang()">FR / EN</button>
     </nav>
 
     <div class="hero">
@@ -101,64 +90,74 @@
     </div>
 
     <section id="description" class="container">
-        <h2 style="text-align:center; margin-bottom:40px;" class="ln" data-fr="Un havre de paix face à l'Atlantique" data-en="A Sanctuary Facing the Atlantic">Un havre de paix face à l'Atlantique</h2>
+        <h2 style="text-align:center; margin-bottom:40px;" class="ln" data-en="A Sanctuary Facing the Atlantic" data-fr="Un havre de paix face à l'Atlantique">A Sanctuary Facing the Atlantic</h2>
         
         <div class="description-box">
-            <div class="ln" data-fr="
-                <p>Découvrez la Villa South Wave, une retraite d'exception nichée au cœur du quartier sauvage et authentique de Toiny. Cette demeure unique a été pensée pour ceux qui cherchent à s'évader du tumulte quotidien et à se reconnecter avec la nature brute de Saint-Barthélemy. Face à l'immensité de l'océan, la villa offre un spectacle permanent où le bleu azur du ciel rencontre les vagues de l'Atlantique.</p>
-                <p>La villa dispose de deux suites élégantes, chacune dotée de sa propre salle de bain privative, offrant un confort absolu et une intimité totale pour quatre personnes. Les espaces de vie sont baignés de lumière : un salon spacieux et une cuisine moderne, entièrement climatisés, s'ouvrent sur une vaste terrasse en bois. C'est ici que la magie opère, entre la piscine chauffée qui semble se confondre avec l'horizon et les espaces de repos ombragés.</p>
-                <p>Pour parfaire votre expérience, la villa est équipée d'une douche extérieure tropicale, idéale après une session de surf ou une marche sur la plage de Toiny, accessible en seulement quelques minutes à pied. Que vous soyez amateur de design contemporain ou amoureux de la tranquillité des Antilles, la Villa South Wave est la promesse d'un séjour inoubliable, où le luxe se conjugue avec simplicité et élégance.</p>" 
-            data-en="
+            <div id="desc-text" class="ln" data-en="
                 <p>Discover Villa South Wave, an exceptional retreat nestled in the heart of the wild and authentic Toiny district. This unique residence was designed for those seeking to escape the daily hustle and reconnect with the raw nature of Saint-Barthélemy. Facing the vastness of the ocean, the villa offers a permanent spectacle where the azure blue of the sky meets the Atlantic waves.</p>
                 <p>The villa features two elegant suites, each with its own private bathroom, offering absolute comfort and total privacy for four guests. The living areas are bathed in light: a spacious lounge and a modern kitchen, both fully air-conditioned, open onto a large wooden terrace. This is where the magic happens, between the heated pool that seems to merge with the horizon and the shaded relaxation areas.</p>
-                <p>To complete your experience, the villa is equipped with a tropical outdoor shower, ideal after a surf session or a walk on Toiny beach, accessible in just a few minutes on foot. Whether you are a fan of contemporary design or a lover of West Indian tranquility, Villa South Wave is the promise of an unforgettable stay, where luxury is combined with simplicity and elegance.</p>">
+                <p>To complete your experience, the villa is equipped with a tropical outdoor shower, ideal after a surf session or a walk on Toiny beach, accessible in just a few minutes on foot. Whether you are a fan of contemporary design or a lover of West Indian tranquility, Villa South Wave is the promise of an unforgettable stay, where luxury is combined with simplicity and elegance.</p>" 
+            data-fr="
+                <p>Découvrez la Villa South Wave, une retraite d'exception nichée au cœur du quartier sauvage et authentique de Toiny. Cette demeure unique a été pensée pour ceux qui cherchent à s'évader du tumulte quotidien et à se reconnecter avec la nature brute de Saint-Barthélemy. Face à l'immensité de l'océan, la villa offre un spectacle permanent où le bleu azur du ciel rencontre les vagues de l'Atlantique.</p>
+                <p>La villa dispose de deux suites élégantes, chacune dotée de sa propre salle de bain privative, offrant un confort absolu et une intimité totale pour quatre personnes. Les espaces de vie sont baignés de lumière : un salon spacieux et une cuisine moderne, entièrement climatisés, s'ouvrent sur une vaste terrasse en bois. C'est ici que la magie opère, entre la piscine chauffée qui semble se confondre avec l'horizon et les espaces de repos ombragés.</p>
+                <p>Pour parfaire votre expérience, la villa est équipée d'une douche extérieure tropicale, idéale après une session de surf ou une marche sur la plage de Toiny, accessible en seulement quelques minutes à pied. Que vous soyez amateur de design contemporain ou amoureux de la tranquillité des Antilles, la Villa South Wave est la promesse d'un séjour inoubliable, où le luxe se conjugue avec simplicité et élégance.</p>">
+                <p>Discover Villa South Wave, an exceptional retreat nestled in the heart of the wild and authentic Toiny district. This unique residence was designed for those seeking to escape the daily hustle and reconnect with the raw nature of Saint-Barthélemy. Facing the vastness of the ocean, the villa offers a permanent spectacle where the azure blue of the sky meets the Atlantic waves.</p>
+                <p>The villa features two elegant suites, each with its own private bathroom, offering absolute comfort and total privacy for four guests. The living areas are bathed in light: a spacious lounge and a modern kitchen, both fully air-conditioned, open onto a large wooden terrace. This is where the magic happens, between the heated pool that seems to merge with the horizon and the shaded relaxation areas.</p>
+                <p>To complete your experience, the villa is equipped with a tropical outdoor shower, ideal after a surf session or a walk on Toiny beach, accessible in just a few minutes on foot. Whether you are a fan of contemporary design or a lover of West Indian tranquility, Villa South Wave is the promise of an unforgettable stay, where luxury is combined with simplicity and elegance.</p>
             </div>
         </div>
 
         <div class="features">
-            <div class="feat-card ln" data-fr="2 Suites & 2 Salles de bain" data-en="2 Suites & 2 Bathrooms">2 Suites & 2 Salles de bain</div>
-            <div class="feat-card ln" data-fr="Piscine Chauffée" data-en="Heated Pool">Piscine Chauffée</div>
-            <div class="feat-card ln" data-fr="Salon & Cuisine Climatisés" data-en="A/C Living & Kitchen">Salon & Cuisine Climatisés</div>
-            <div class="feat-card ln" data-fr="Plage à pied" data-en="Short Walk to Beach">Plage à pied</div>
+            <div class="feat-card ln" data-en="2 Suites & 2 Bathrooms" data-fr="2 Suites & 2 Salles de bain">2 Suites & 2 Bathrooms</div>
+            <div class="feat-card ln" data-en="Heated Pool" data-fr="Piscine Chauffée">Heated Pool</div>
+            <div class="feat-card ln" data-en="A/C Living & Kitchen" data-fr="Salon & Cuisine Climatisés">A/C Living & Kitchen</div>
+            <div class="feat-card ln" data-en="Short Walk to Beach" data-fr="Plage à pied">Short Walk to Beach</div>
         </div>
     </section>
 
     <section id="galerie">
-        <h2 style="text-align:center;">Galerie</h2>
+        <h2 style="text-align:center;" class="ln" data-en="Gallery" data-fr="Galerie">Gallery</h2>
         <div class="gallery" id="grid"></div>
     </section>
 
+    <section id="availability" class="container">
+        <h2 style="text-align:center;" class="ln" data-en="Availability" data-fr="Disponibilités">Availability</h2>
+        <div style="text-align:center; padding: 40px; background: white; border: 1px solid #eee;">
+            <p class="ln" data-en="Our booking calendar will be available here soon." data-fr="Notre calendrier de réservation sera bientôt disponible ici.">Our booking calendar will be available here soon.</p>
+        </div>
+    </section>
+
     <div id="lightbox" onclick="this.style.display='none'">
-        <img id="lightimg" src="" alt="Agrandissement">
+        <img id="lightimg" src="">
     </div>
 
     <section id="contact" class="contact-section">
         <div class="form-container">
-            <h2 style="text-align:center; margin-bottom:30px;" class="ln" data-fr="Demande de Réservation" data-en="Booking Request">Demande de Réservation</h2>
-            <form action="#">
+            <h2 style="text-align:center; margin-bottom:30px;" class="ln" data-en="Booking Request" data-fr="Demande de Réservation">Booking Request</h2>
+            <form>
                 <div class="form-grid">
                     <div class="full-width">
-                        <label class="ln" data-fr="Nom Complet" data-en="Full Name">Nom Complet</label>
-                        <input type="text" placeholder="John Doe" required>
+                        <label class="ln" data-en="Full Name" data-fr="Nom Complet">Full Name</label>
+                        <input type="text" required>
                     </div>
                     <div>
                         <label>Email</label>
-                        <input type="email" placeholder="john@example.com" required>
+                        <input type="email" required>
                     </div>
                     <div>
-                        <label class="ln" data-fr="Téléphone" data-en="Phone Number">Téléphone</label>
-                        <input type="tel" placeholder="+33..." required>
+                        <label class="ln" data-en="Phone Number" data-fr="Numéro de Téléphone">Phone Number</label>
+                        <input type="tel" required>
                     </div>
                     <div>
-                        <label class="ln" data-fr="Date d'Arrivée" data-en="Arrival Date">Date d'Arrivée</label>
+                        <label class="ln" data-en="Arrival Date" data-fr="Date d'Arrivée">Arrival Date</label>
                         <input type="date" required>
                     </div>
                     <div>
-                        <label class="ln" data-fr="Date de Départ" data-en="Departure Date">Date de Départ</label>
+                        <label class="ln" data-en="Departure Date" data-fr="Date de Départ">Departure Date</label>
                         <input type="date" required>
                     </div>
                     <div class="full-width">
-                        <label class="ln" data-fr="Nombre de Personnes" data-en="Number of Guests">Nombre de Personnes</label>
+                        <label class="ln" data-en="Number of Guests" data-fr="Nombre de Personnes">Number of Guests</label>
                         <select>
                             <option>1</option>
                             <option selected>2</option>
@@ -168,16 +167,15 @@
                     </div>
                     <div class="full-width">
                         <label>Message</label>
-                        <textarea rows="5" placeholder="Votre message..."></textarea>
+                        <textarea rows="5"></textarea>
                     </div>
                 </div>
-                <button type="submit" class="submit-btn ln" data-fr="Envoyer la demande" data-en="Send Request">Envoyer la demande</button>
+                <button type="submit" class="submit-btn ln" data-en="Send Request" data-fr="Envoyer la demande">Send Request</button>
             </form>
         </div>
     </section>
 
     <script>
-        // GÉNÉRATION PHOTOS
         const grid = document.getElementById('grid');
         const lb = document.getElementById('lightbox');
         const limg = document.getElementById('lightimg');
@@ -185,7 +183,6 @@
         for (let i = 1; i <= 25; i++) {
             const img = document.createElement('img');
             img.src = `Villa_South_Wave_${i}.jpeg`;
-            img.alt = `Photo ${i}`;
             img.onclick = () => {
                 limg.src = img.src;
                 lb.style.display = 'flex';
@@ -193,10 +190,9 @@
             grid.appendChild(img);
         }
 
-        // TRADUCTION
-        let lang = 'fr';
+        let lang = 'en';
         function switchLang() {
-            lang = (lang === 'fr') ? 'en' : 'fr';
+            lang = (lang === 'en') ? 'fr' : 'en';
             document.querySelectorAll('.ln').forEach(el => {
                 el.innerHTML = el.getAttribute(`data-${lang}`);
             });
