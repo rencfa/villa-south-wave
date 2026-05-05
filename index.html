@@ -4,81 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Villa South Wave | Saint-Barthélemy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #7d5a44; 
-            --bg: #fdfcf9;
-            --text: #2c2c2c;
+            /* Nouvelle palette Terra Cotta & Élégance */
+            --primary: #B25A44;       /* Terra cotta élégant */
+            --primary-dark: #8C4331;  /* Terra cotta assombri pour le contraste */
+            --bg: #FBF9F8;            /* Blanc chaud très léger */
+            --text: #52423E;          /* Marron/Gris chaud profond pour la lisibilité */
             --white: #ffffff;
-            --insta: #E1306C;
+            --accent-light: #F4EBE8;  /* Nuance terra cotta très claire pour les fonds */
+            --insta: #B25A44;         /* Harmonisation de la couleur Instagram */
         }
 
         * { box-sizing: border-box; }
+        
         body { 
             font-family: 'Montserrat', sans-serif; 
             margin: 0; padding: 0; 
             color: var(--text); 
             background-color: var(--bg);
-            line-height: 1.7;
+            line-height: 1.8;
+            font-weight: 300; /* Plus fin et élégant */
         }
 
-        h1, h2 { font-family: 'Playfair Display', serif; color: var(--primary); text-transform: uppercase; }
+        h1, h2 { 
+            font-family: 'Playfair Display', serif; 
+            color: var(--primary); 
+            text-transform: uppercase; 
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
 
         nav {
             position: sticky; top: 0; width: 100%; background: var(--white);
             display: flex; justify-content: space-between; align-items: center;
-            padding: 15px 5%; z-index: 1000; border-bottom: 1px solid #eee;
+            padding: 18px 5%; z-index: 1000; border-bottom: 1px solid var(--accent-light);
+            box-shadow: 0 4px 20px rgba(178, 90, 68, 0.03);
         }
-        .nav-links { display: flex; gap: 15px; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--primary); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
         
-        .lang-btn { background: var(--primary); color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 3px; font-size: 0.7rem; }
+        .nav-links { display: flex; gap: 25px; align-items: center; }
+        .nav-links a { 
+            text-decoration: none; 
+            color: var(--text); 
+            font-size: 0.75rem; 
+            font-weight: 500; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover { color: var(--primary); }
+        
+        .lang-btn { 
+            background: transparent; 
+            color: var(--primary); 
+            border: 1px solid var(--primary); 
+            padding: 6px 12px; 
+            cursor: pointer; 
+            border-radius: 0; /* Plus minimaliste */
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        .lang-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
 
         .hero { 
             height: 80vh; 
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('Villa_South_Wave_1.jpeg') center/cover no-repeat; 
+            background: linear-gradient(rgba(82, 66, 62, 0.3), rgba(82, 66, 62, 0.3)), url('Villa_South_Wave_1.jpeg') center/cover no-repeat; 
             display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 20px;
         }
-        .hero h1 { color: white; font-size: clamp(2.5rem, 8vw, 5rem); margin: 0; letter-spacing: 5px; }
+        .hero h1 { color: white; font-size: clamp(2.5rem, 8vw, 5rem); margin: 0; letter-spacing: 6px; }
 
-        .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
-        .description-box { background: white; padding: 40px; border-left: 5px solid var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .description-box p { margin-bottom: 20px; font-size: 1.05rem; color: #444; }
+        .container { max-width: 1100px; margin: auto; padding: 80px 20px; }
+        
+        .description-box { 
+            background: white; 
+            padding: 50px; 
+            border-top: 2px solid var(--primary); /* Remplacement du bord gauche épais par un bord supérieur fin */
+            box-shadow: 0 10px 40px rgba(178, 90, 68, 0.05); 
+        }
+        .description-box p { margin-bottom: 20px; font-size: 1.05rem; }
 
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
-        .feat-card { background: #f9f6f2; padding: 20px; border: 1px solid #eee; text-align: center; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 50px; }
+        .feat-card { 
+            background: var(--white); 
+            padding: 25px 20px; 
+            border: 1px solid var(--accent-light); 
+            text-align: center; 
+            text-transform: uppercase; 
+            font-size: 0.75rem; 
+            letter-spacing: 1.5px; 
+            color: var(--primary-dark);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(178, 90, 68, 0.08);
+        }
 
-        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; padding: 20px; }
-        .gallery img { width: 100%; height: 300px; object-fit: cover; cursor: pointer; transition: 0.3s; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; padding: 20px; }
+        .gallery img { width: 100%; height: 300px; object-fit: cover; cursor: pointer; transition: 0.4s ease; filter: brightness(0.95); }
+        .gallery img:hover { filter: brightness(1.05); transform: scale(1.02); }
 
-        #lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; justify-content: center; align-items: center; }
-        #lightbox img { max-width: 90%; max-height: 90%; }
+        #lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(44, 35, 33, 0.95); z-index: 2000; justify-content: center; align-items: center; }
+        #lightbox img { max-width: 90%; max-height: 90%; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
 
-        .contact-section { background: #f4f1ed; padding: 80px 20px; }
-        .form-container { max-width: 800px; margin: auto; background: white; padding: 40px; border-radius: 8px; }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .contact-section { background: var(--accent-light); padding: 100px 20px; }
+        .form-container { max-width: 800px; margin: auto; background: white; padding: 50px; border-radius: 0; box-shadow: 0 10px 30px rgba(178, 90, 68, 0.05); }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
         .full-width { grid-column: span 2; }
         
-        label { display: block; font-weight: 600; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; color: var(--primary); }
-        input, textarea, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Montserrat', sans-serif; }
+        label { display: block; font-weight: 500; font-size: 0.75rem; margin-bottom: 8px; text-transform: uppercase; color: var(--primary); letter-spacing: 1px; }
+        input, textarea, select { 
+            width: 100%; 
+            padding: 15px; 
+            border: 1px solid #E5DCD9; 
+            border-radius: 0; 
+            font-family: 'Montserrat', sans-serif; 
+            background: var(--bg);
+            color: var(--text);
+            transition: border-color 0.3s;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
         
-        .submit-btn { width: 100%; background: var(--primary); color: white; border: none; padding: 20px; font-size: 1.2rem; cursor: pointer; margin-top: 20px; font-family: 'Playfair Display'; }
+        .submit-btn { 
+            width: 100%; 
+            background: var(--primary); 
+            color: white; 
+            border: 1px solid var(--primary); 
+            padding: 20px; 
+            font-size: 1.1rem; 
+            cursor: pointer; 
+            margin-top: 30px; 
+            font-family: 'Playfair Display', serif; 
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+        }
+        .submit-btn:hover {
+            background: white;
+            color: var(--primary);
+        }
 
-        .instagram-footer { text-align: center; margin-top: 40px; }
-        .instagram-footer a { color: var(--insta); text-decoration: none; font-weight: 600; font-size: 1.1rem; letter-spacing: 1px; }
+        .instagram-footer { text-align: center; margin-top: 50px; }
+        .instagram-footer a { color: var(--insta); text-decoration: none; font-weight: 500; font-size: 1rem; letter-spacing: 1.5px; text-transform: uppercase; }
 
         @media (max-width: 768px) {
             .form-grid { grid-template-columns: 1fr; }
             .full-width { grid-column: span 1; }
             .nav-links { display: none; }
+            .description-box { padding: 30px 20px; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div style="font-family: 'Playfair Display'; font-weight: bold; font-size: 1.2rem;">VILLA SOUTH WAVE</div>
+        <div style="font-family: 'Playfair Display'; font-weight: 600; font-size: 1.3rem; color: var(--primary); letter-spacing: 1px;">VILLA SOUTH WAVE</div>
         <div class="nav-links">
             <a href="#description" class="ln" data-en="The Villa" data-fr="La Villa">The Villa</a>
             <a href="#galerie" class="ln" data-en="Gallery" data-fr="Galerie">Gallery</a>
@@ -91,11 +179,11 @@
 
     <div class="hero">
         <h1>Villa South Wave</h1>
-        <p style="text-transform: uppercase; letter-spacing: 3px;">Toiny, Saint-Barthélemy</p>
+        <p style="text-transform: uppercase; letter-spacing: 4px; font-weight: 400;">Toiny, Saint-Barthélemy</p>
     </div>
 
     <section id="description" class="container">
-        <h2 style="text-align:center; margin-bottom:40px;" class="ln" data-en="A Sanctuary Facing the Atlantic" data-fr="Un havre de paix face à l'Atlantique">A Sanctuary Facing the Atlantic</h2>
+        <h2 style="text-align:center; margin-bottom:50px;" class="ln" data-en="A Sanctuary Facing the Atlantic" data-fr="Un havre de paix face à l'Atlantique">A Sanctuary Facing the Atlantic</h2>
         
         <div class="description-box">
             <div id="desc-text" class="ln" data-en="
@@ -121,14 +209,14 @@
     </section>
 
     <section id="galerie">
-        <h2 style="text-align:center;" class="ln" data-en="Gallery" data-fr="Galerie">Gallery</h2>
+        <h2 style="text-align:center; margin-bottom: 30px;" class="ln" data-en="Gallery" data-fr="Galerie">Gallery</h2>
         <div class="gallery" id="grid"></div>
     </section>
 
     <section id="availability" class="container">
-        <h2 style="text-align:center;" class="ln" data-en="Availability" data-fr="Disponibilités">Availability</h2>
-        <div style="text-align:center; padding: 40px; background: white; border: 1px solid #eee;">
-            <p class="ln" data-en="Our booking calendar will be available here soon." data-fr="Notre calendrier de réservation sera bientôt disponible ici.">Our booking calendar will be available here soon.</p>
+        <h2 style="text-align:center; margin-bottom: 40px;" class="ln" data-en="Availability" data-fr="Disponibilités">Availability</h2>
+        <div style="text-align:center; padding: 60px 40px; background: white; border: 1px solid var(--accent-light); box-shadow: 0 10px 30px rgba(178, 90, 68, 0.03);">
+            <p class="ln" style="font-size: 1.1rem; color: var(--primary-dark);" data-en="Our booking calendar will be available here soon." data-fr="Notre calendrier de réservation sera bientôt disponible ici.">Our booking calendar will be available here soon.</p>
         </div>
     </section>
 
@@ -138,7 +226,7 @@
 
     <section id="contact" class="contact-section">
         <div class="form-container">
-            <h2 style="text-align:center; margin-bottom:30px;" class="ln" data-en="Booking Request" data-fr="Demande de Réservation">Booking Request</h2>
+            <h2 style="text-align:center; margin-bottom:40px;" class="ln" data-en="Booking Request" data-fr="Demande de Réservation">Booking Request</h2>
             <form>
                 <div class="form-grid">
                     <div class="full-width">
